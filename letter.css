@@ -16,7 +16,7 @@ body{
 }
 
 .content-container {
-    display: flex;
+    display: inline-flex;
     position: absolute;
     background-color: #CDCDCD;
     top: 18.5%; 
@@ -24,17 +24,48 @@ body{
     width: 66.5%; 
     height: 63.5%; 
     z-index: -1;
-    justify-self: center;
     align-items: center;
+    justify-content: center;
 }
 
-.content {
+#mail-container {
+    aspect-ratio: 375/300;
+    width: 25%;
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+#noti {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 113%;
+    z-index: 2;
+}
+
+#noti:hover {
+    content: url(media/open_envelope.png);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+}
+
+#noti:active {
+    transform: scale(.9);
+}
+
+/* .content {
     width: 100%;
     height: 100%;
     padding: 3% 5%;
-}
+    text-align: center;
+} */
 
-
+/* 
 .headline {
     text-align: center;
     width: 100%;
@@ -70,5 +101,5 @@ body{
 
 .ok img:active {
     transform: scale(1);
-}
+} */
 
