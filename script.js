@@ -26,16 +26,37 @@ function openmail() {
 }
 
 let currentLetter = 1;
+let totalLetters = 11;
 
-function nextletter() {
-    $(`#letter${currentLetter}`).hide();
-    currentLetter++;
-    if ($(`#letter${currentLetter}`).length > 0) {
-        $(`#letter${currentLetter}`).show();
+function showLetter(letterNumber) {
+    $('.full-screen').hide();
+    $(`#letter${letterNumber}`).show();
+}
+
+function nextLetter(event) {
+    event.stopPropagation();
+    if ($('.full-screen:visible').length === 0) {
+        return; // If no letter is shown, do nothing
+    }
+    if (currentLetter < totalLetters) {
+        currentLetter++;
     } else {
         currentLetter = 1;
-        $(`#letter${currentLetter}`).show();
     }
+    showLetter(currentLetter);
+}
+
+function previousLetter(event) {
+    event.stopPropagation();
+    if ($('.full-screen:visible').length === 0) {
+        return; 
+    }
+    if (currentLetter > 1) {
+        currentLetter--;
+    } else {
+        currentLetter = totalLetters;
+    }
+    showLetter(currentLetter);
 }
 
 function closeFullscreen() {
@@ -43,14 +64,14 @@ function closeFullscreen() {
     currentLetter = 1; 
 }
 
-$(document).on("keydown", function(event) {
-    if (event.key === "Escape") {
+$(document).on('keydown', function(e) {
+    if (e.key == "ArrowRight") {
+        nextLetter(e); 
+    } else if (e.key == "ArrowLeft") {
+        previousLetter(e); 
+    } else if (e.key == "Escape") {
         closeFullscreen(); 
-    }
-});
-
-$('.full-screen').on('click', function(e) {
-    if ($(e.target).closest('.letter').length === 0) { 
+    } else if (e.key == " ") {
         closeFullscreen();
     }
 });

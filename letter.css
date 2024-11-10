@@ -101,6 +101,51 @@ body{
     z-index: 1000;
 }
 
+.x-container {
+    position: absolute;
+    top: -20px;
+    right: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.x-icon {
+    width: 5%;
+}
+
+.x-icon:hover {
+    cursor: pointer;
+}
+
+.x-icon:active {
+    transform: scale(.9) !important;
+}
+
+.letter-container {
+    position: relative;
+    text-align: center;
+}
+
 .letter {
     width: 100%;
+}
+
+.arrow-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px; 
+    padding: 0 10px;
+}
+
+.arrow {
+    width: 10%; 
+}
+
+.arrow:active {
+    transform: scale(.9) !important;
+}
+
+.arrow:hover {
+    cursor: pointer;
 }
