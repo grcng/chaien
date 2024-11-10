@@ -38,6 +38,27 @@ body{
     transform: translate(-50%, -50%); 
 }
 
+.mail:active {
+    transform: scale(.9) !important;
+}
+
+#opened-mail:hover{
+    content: url(media/open_envelope.png);
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    cursor: pointer;
+    transform: rotate(0deg);
+}
+
+#opened-mail {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    display: none;
+}
+
 #noti {
     position: absolute;
     left: 0;
@@ -51,12 +72,6 @@ body{
     animation-duration: 2s;
 }
 
-.noti-opened {
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
-
 @keyframes noti {
     5%, 15% {transform: rotate(10deg);}
     10%, 20% {transform: rotate(-10deg);}
@@ -64,19 +79,13 @@ body{
     100% {transform: rotate(0deg);}
 }
 
-#noti:hover {
+#noti:hover{
     content: url(media/open_envelope.png);
     left: 0;
     bottom: 0;
     width: 100%;
     cursor: pointer;
-    animation-play-state: paused;
     transform: rotate(0deg);
-}
-
-#noti:active {
-    transform: scale(.9) !important;
-    /* animation-play-state: paused; */
 }
 
 /* .content {

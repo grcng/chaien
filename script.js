@@ -21,8 +21,7 @@ if (noti.src.includes("noti_envelope.png")) {
 }
 
 function openmail() {
-    noti.src = 'media/envelope.png';
-    noti.classList.remove('noti-animate');
-    noti.style.width = window.getComputedStyle(document.getElementById("mail-container")).width;
-    noti.replaceWith(noti.cloneNode(true)); // A quick way to clear all attached events on `noti`
+    noti.style.display = 'none';
+    const mail = document.getElementById("opened-mail");
+    mail.style.display = "block";
 }
