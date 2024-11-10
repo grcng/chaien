@@ -43,7 +43,25 @@ body{
     left: 0;
     bottom: 0;
     width: 113%;
-    z-index: 2;
+}
+
+.noti-animate {
+    animation-name: noti;
+    animation-iteration-count: infinite;
+    animation-duration: 2s;
+}
+
+.noti-opened {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+@keyframes noti {
+    5%, 15% {transform: rotate(10deg);}
+    10%, 20% {transform: rotate(-10deg);}
+    25%  {transform: rotate(0deg);}
+    100% {transform: rotate(0deg);}
 }
 
 #noti:hover {
@@ -52,10 +70,13 @@ body{
     bottom: 0;
     width: 100%;
     cursor: pointer;
+    animation-play-state: paused;
+    transform: rotate(0deg);
 }
 
 #noti:active {
-    transform: scale(.9);
+    transform: scale(.9) !important;
+    /* animation-play-state: paused; */
 }
 
 /* .content {
