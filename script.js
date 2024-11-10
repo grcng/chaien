@@ -1,3 +1,12 @@
+// page 1
+
+function play() {
+    const video = document.getElementById("background-video");
+    video.play();
+}
+
+// page 2
+
 const noti = document.getElementById("noti");
 
 noti.classList.add("noti-animate");
