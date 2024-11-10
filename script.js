@@ -33,7 +33,6 @@ function nextletter() {
     if ($(`#letter${currentLetter}`).length > 0) {
         $(`#letter${currentLetter}`).show();
     } else {
-        // Reset to the first letter or hide all if needed
         currentLetter = 1;
         $(`#letter${currentLetter}`).show();
     }
@@ -51,7 +50,7 @@ $(document).on("keydown", function(event) {
 });
 
 $('.full-screen').on('click', function(e) {
-    if ($(e.target).closest('.letter').length === 0) { // Check if the click is outside the image
+    if ($(e.target).closest('.letter').length === 0) { 
         closeFullscreen();
     }
 });

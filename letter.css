@@ -51,7 +51,7 @@ body{
 }
 
 #opened-mail:hover{
-    content: url(media/open_envelope.png);
+    content: url(media/icons/open_envelope.png);
     left: 0;
     bottom: 0;
     width: 100%;
@@ -80,7 +80,7 @@ body{
 }
 
 #noti:hover{
-    content: url(media/open_envelope.png);
+    content: url(media/icons/open_envelope.png);
     left: 0;
     bottom: 0;
     width: 100%;
@@ -104,49 +104,3 @@ body{
 .letter {
     width: 100%;
 }
-
-/* .content {
-    width: 100%;
-    height: 100%;
-    padding: 3% 5%;
-    text-align: center;
-} */
-
-/* 
-.headline {
-    text-align: center;
-    width: 100%;
-    background-color: #0045b5;
-}
-
-.headline h3 {
-    margin: 0;
-    color: #F5C9FE;
-}
-
-.text-area {
-    width: 100%;
-    height: 60%;
-    justify-self: center;
-    background-color: #D9D9D9;
-}
-
-.ok {
-    width: 100%;
-    text-align: end;
-}
-
-.ok img {
-    width: 20%;
-    padding: 2% 0% 2% 2%;
-}
-
-.ok img:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-}
-
-.ok img:active {
-    transform: scale(1);
-} */
-
